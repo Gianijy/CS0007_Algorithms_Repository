@@ -5,26 +5,32 @@
 //flag pos = -1;
 #include <iostream>
 using namespace std;
-int main(){
-	int num[10],i,x,pos=-1;
+int main()
+{
+	int num[10], i, x, pos = -1;
+
 	//prompt
 	cout << "Enter 10 integers: ";
-	for (i=0; i<10; i++ ){
+	for(i = 0; i < 10; i++ )
+	{
 		cin >> num[i];
 	}	
+
 	cout << "Enter number to search: ";
 	cin >> x;
 	
-	for (i=0; i<10; i++){
-		if (x==num[i]) {
-			pos = i+1;
+	for(i = 0; i < 10; i++)
+	{
+		if(x == num[i]) 
+		{
+			pos = i + 1;
 			break;
 		}
 	}
-	if (pos == -1)
-		cout << "Element " << x << " not found ";
+	if(pos == -1)
+		cout << "Element " << x << " not found " << endl;
 	else
-		cout << "\nThe position of " << x << " is" <<pos;
+		cout << "\nThe position of " << x << " is " << pos << endl;
 		 
 	return 0;
 }
